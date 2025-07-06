@@ -18,7 +18,7 @@ const Navbar = () => {
             <img  src={logo} alt="logo"  width={50} />
           <h1 className='text-xl font-bold text-black p-2 pt-5' >Fashion_BD</h1>
           </div>
-          <div >
+          <div className='hidden lg:block'>
             {/* This section is for list of items */}
             <ul className='flex items-center gap-4 p-2 '>
               <li className='text-black font-bold hover:border-b-2 p-1 border-blue-600 transition-all duration-100 ease-in-out cursor-pointer' onClick={()=>setmenu("shop")}>
