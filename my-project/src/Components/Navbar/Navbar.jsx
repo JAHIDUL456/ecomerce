@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { use } from 'react'
 import logo from '../../Components/Assets/logo.png' // Adjust the path as necessary
 import cart from '../../Components/Assets/cart_icon.png' // Adjust the path as necessary
+import { Link } from 'react-router-dom' // Import Link for navigation
+import { useState } from 'react' // Import useState for managing state
 const Navbar = () => {
+
+  const [menu, setmenu]= useState("shop");
   return (
+   
     <div>
       <div className='bg-white shadow-md '>
         <nav className='flex justify-between items-center  pl-4 pr-4'>
@@ -16,18 +21,33 @@ const Navbar = () => {
           <div >
             {/* This section is for list of items */}
             <ul className='flex items-center gap-4 p-2 '>
-              <li><a href="/" className="text-black p-2 font-bold hover:border-b-2 hover:border-blue-500 courser-pointer">Home</a></li>
-              <li><a href="/products" className="text-black p-2 font-bold hover:border-b-2 hover:border-blue-500 courser-pointer">Products</a></li>
-              <li><a href="/about" className="text-black p-2 font-bold hover:border-b-2 hover:border-blue-500 courser-pointer">About</a></li>
-              <li><a href="/contact" className="text-black p-2 font-bold hover:border-b-2 hover:border-blue-500 courser-pointer">Contact</a></li>
+              <li className='text-black font-bold hover:border-b-2 p-1 border-blue-600 transition-all duration-100 ease-in-out cursor-pointer' onClick={()=>setmenu("shop")}>
+                <Link to="/">Shop</Link>
+              </li>
+              <li className='text-black font-bold hover:border-b-2 p-1 border-blue-600 transition-all duration-100 ease-in-out cursor-pointer' onClick={()=>setmenu("men")}> 
+                <Link to="/mens">Mens</Link></li>
+              <li className='text-black font-bold hover:border-b-2 p-1 border-blue-600 transition-all duration-100 ease-in-out cursor-pointer' onClick={()=>setmenu("women")}>
+                <Link to="/womens">Womens</Link>
+              </li>
+              <li className='text-black font-bold hover:border-b-2 p-1 border-blue-600 transition-all duration-100 ease-in-out cursor-pointer' onClick={()=>setmenu("kids")}>
+                <Link to="/kids">Kids</Link> </li>
+          
+
             </ul>
           </div>
           <div className='flex items-center gap-4 p-2'>
             {/* This section is for search bar */}
+            
+            
+            <Link to="/login">
             <button className='border-2 border-blue-600 text-black p-2 font-bold rounded-xl hover:border-green-400 hover:text-black hover:font-bold transition-all duration-200 ease-in-out'>Login</button>
-            <a href="/">
-              <img src={cart} alt="" className='w-8 h-8' />
-            </a>
+            </Link>
+            
+            <Link to="/cart">
+            <img src={cart} alt="" className='w-8 h-8' />
+            </Link>
+              
+            
           </div>
         </nav>
       </div>
