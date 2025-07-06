@@ -7,7 +7,7 @@ const Hero = () => {
         <div className='flex justify-between items-center p-4 bg-gray-100 '>
             <div className='lg:ml-[250px]'>
                 {/* Left side content */}
-                <p className='text-4xl font-bold p-1'>New Arrival</p>
+                <p className='text-4xl font-bold p-1'>New Arrival1</p>
                 <p className='text-3xl font-bold p-1 text-red-400'>2025 Best</p>
                 <p className='text-2xl font-bold p-1'>Collections</p>
                 <Link to="/products" ><button className='bg-red-400 text-white py-2 px-4 ml-2 mt-5 rounded-md hover:bg-red-500 transition-all duration-300 ease-in-out courser-pointer'>Shop Now</button></Link>
