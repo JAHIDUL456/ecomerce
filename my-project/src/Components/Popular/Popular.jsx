@@ -4,14 +4,15 @@ import data from '../../Components/Assets/data.js'
 const Popular = () => {
   return (
     <div className='w-[90%] mx-auto bg-white mb-25'>
-      <h2 className='text-3xl font-bold text-center font-serif p-2 lg:mb-12 mt-5'>
+      <h2 className='text-3xl font-bold text-center font-serif p-2 lg:mb-10 mt-5'>
         Popular Products
       </h2>
+     
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 p-4'>
         {data.map((item) => (
           <div
             key={item.id}
-            className='w-full p-2 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-gray-100 hover:border-2 hover:border-gray-300'
+            className='w-full p-2 rounded-lg shadow-lg   hover:bg-gray-100 hover:scale-[1.1] transition-all duration-300 hover:border-b-1 hover:border-red-500'
           >
             <div className='flex justify-center'>
               <img
