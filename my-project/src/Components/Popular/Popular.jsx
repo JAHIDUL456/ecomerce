@@ -3,7 +3,7 @@ import data from '../../Components/Assets/data.js'
 
 const Popular = () => {
   return (
-    <div className='w-[90%] mx-auto bg-white mb-25'>
+    <div className='w-[90%] mx-auto bg-white mb-15'>
       <h2 className='text-3xl font-bold text-center font-serif p-2 lg:mb-10 mt-5'>
         Popular Products
       </h2>
