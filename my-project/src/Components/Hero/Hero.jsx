@@ -4,7 +4,7 @@ import hero from '../../Components/Assets/hero_image.png'
 const Hero = () => {
   return (
     <div>
-        <div className='flex justify-between items-center p-4 bg-gray-100 '>
+        <div className='flex justify-between items-center p-4 bg-gradient-to-r from-gray-100 via-purple-100 to-pink-100'>
             <div className='lg:ml-[250px]'>
                 {/* Left side content */}
                 <p className='text-4xl font-bold p-1'>New Arrival</p>
