@@ -6,6 +6,7 @@ import ShopCat from './Pages/ShopCat'
 import Product from './Pages/Product'
 import Cart from './Pages/Cart'
 import LoginSignup from './Pages/LoginSignup'
+import Footer from './Components/Footer/Footer.jsx'
 const App = () => {
   return (
     <div>
@@ -26,6 +27,7 @@ const App = () => {
 
 
         </Routes>
+        <Footer />
         
       </BrowserRouter>
     </div>
