@@ -15,21 +15,16 @@ const App = () => {
     <div>
       <BrowserRouter>
       <Navbar />
-        <Routes>
-          <Route path="/" element={<Shop/>} />
-          <Route path="/mens" element={<ShopCat banner={men_banner} category="men"/>} /> 
-          <Route path="/womens" element={<ShopCat banner={women_banner} category="women"/>} />
-          <Route path="/kids" element={<ShopCat banner={kids_banner} category="kid"/>} />
-          <Route path="/products" element={<Product/>} />
-          <Route path=":productId" element={<Product/>} />
-          <Route path="/cart" element={<Cart/>} />
-          <Route path="/login" element={<LoginSignup/>} />
+      <Routes>
+  <Route path="/" element={<Shop />} />
+  <Route path="/mens" element={<ShopCat banner={men_banner} category="men" />} />
+  <Route path="/womens" element={<ShopCat banner={women_banner} category="women" />} />
+  <Route path="/kids" element={<ShopCat banner={kids_banner} category="kid" />} />
+  <Route path="/product/:productId" element={<Product />} /> {/* ✅ Correct dynamic route */}
+  <Route path="/cart" element={<Cart />} />
+  <Route path="/login" element={<LoginSignup />} />
+</Routes>
 
-
-
-
-
-        </Routes>
         <Footer />
         
       </BrowserRouter>
