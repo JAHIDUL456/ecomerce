@@ -1,5 +1,6 @@
 import React from 'react'
 import collections from '../Assets/new_collections.js'
+import { Link } from 'react-router-dom';
 const Collections = () => {
   return (
 <div className='w-[90%] mx-auto bg-white mb-15 mt-2'>
@@ -14,11 +15,12 @@ const Collections = () => {
             className='w-full p-2 rounded-lg shadow-lg   hover:bg-gray-100 hover:scale-[1.1] transition-all duration-300 hover:border-b-1 hover:border-red-500'
           >
             <div className='flex justify-center'>
+              <Link to={`/product/${item.id}`} className='flex flex-col items-center'>
               <img
                 src={item.image}
                 alt={item.name}
                 className='w-full max-w-[180px] h-auto mb-4 p-2 rounded-xl'
-              />
+              /></Link>
             </div>
             <h3 className='text-lg font-semibold mb-2 sm:text-md'>{item.name}</h3>
             <p className='text-gray-500 line-through'>${item.old_price.toFixed(2)}</p>
